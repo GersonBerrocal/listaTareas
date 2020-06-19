@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* font-family: 'Poppins', sans-serif; */
+:root{
+  --marginDefault:1em;
+  --softWhite:rgb(247, 247, 247);
+  --colorSelect:gray;
+  --colorBlue:rgb(12, 12, 20);
+}
+body {
+  font-size: 18px;
+  background-color:var(--softWhite);
+  font-family: 'Poppins',sans-serif;
+}
+/* GRIDES */
+.contenedor {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  height: 100vh;
+  padding-right: 1em;
+}
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 5px 0px 10px 4px rgb(212, 212, 212);
+  margin-right:2em;
+}
+.nav-tab {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.nav-tab:last-child{
+  margin-bottom: 0px;
+}
+.nav-tab i {
+font-size: 36px;
+cursor: pointer;
+transition: color .3s linear;
+color: var(--colorBlue);
+}
+.nav-tab i:hover, .nav-tab.nav-tab-seleccionado i{
+  color: var(--colorSelect);
+}
+
+/* =====CUEERPO====== */
+/* TITULO */
+.cuerpo-tareas {
+  overflow: auto;
+  margin: 0 auto;
+  padding: 0 1em;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.section-titulo {
+  padding: 1em 0px;
+}
+.titulo-principal {
+  text-transform: uppercase;
+  color: var(--colorBlue);
+  font-size: 2.7em;
+}
+/* AGREGAR TAREA */
+.agregar-tarea {
+  padding: .5em 0;
+  margin-bottom:1em ;
+}
+.input-agregar-tarea {
+  display: inline-block;
+  width: 100%;
+  padding: 0 5px;
+  border-bottom: 1px solid 
+  var(--colorSelect);
+  font-weight: 300;
+}
+.input-agregar-tarea:focus {
+  outline: none;
+}
+.input-agregar-tarea:empty::before {
+    position: absolute;
+  color: var(--colorSelect);
+  content: "Agregar tarea";
+  cursor: text;
+}
+/* TAREA */
+.tarea {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}.tarea-indicador{
+  cursor: pointer;
+}
+.tarea-indicador:checked ~ .tarea-contenido {
+  text-decoration: line-through;
+  color: var(--colorSelect);
+}
+
+.tarea-opciones {
+  padding: 0 10px;
+}
+.tarea-contenido {
+  flex: 1;
+}
+.tarea-editable {
+  display: inline-block;
+  width: 100%;
+  padding: 0 5px;
+  text-decoration: inherit;
+  font-weight: 300;
+  font-size: 1em;
+}
+.tarea-editable:focus {
+  outline: none;
+}
+.tarea-editable:empty::before {
+  position: absolute;
+  color: var(--colorSelect);
+  content: "Escribe la nota";
+  cursor: text;
+}
