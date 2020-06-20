@@ -76,12 +76,14 @@ color: var(--colorBlue);
   border-bottom: 1px solid 
   var(--colorSelect);
   font-weight: 300;
+  cursor: text;
 }
+
 .input-agregar-tarea:focus {
   outline: none;
 }
 .input-agregar-tarea:empty::before {
-    position: absolute;
+  position: absolute;
   color: var(--colorSelect);
   content: "Agregar tarea";
   cursor: text;
@@ -90,9 +92,14 @@ color: var(--colorBlue);
 .tarea {
   display: flex;
   flex-direction: row;
-  align-items: center;
-}.tarea-indicador{
+  align-items: flex-start;
+  /* align-items: center; */
+}
+.tarea-indicador{
   cursor: pointer;
+  /* transform: scale(1.3); */
+  display: inline-block;
+  margin-top: .5em;
 }
 .tarea-indicador:checked ~ .tarea-contenido {
   text-decoration: line-through;
@@ -112,6 +119,8 @@ color: var(--colorBlue);
   text-decoration: inherit;
   font-weight: 300;
   font-size: 1em;
+  /* word-break: break-all; */
+  word-break: keep-all;
 }
 .tarea-editable:focus {
   outline: none;

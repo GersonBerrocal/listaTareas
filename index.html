@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/anuncio.css">
 </head>
 
 <body>
@@ -26,35 +27,37 @@
       </header>
       <section>
         <div class="agregar-tarea">
-          <div contenteditable class="input-agregar-tarea"></div>
+          <div contenteditable spellcheck="false" class="input-agregar-tarea"></div>
         </div>
       </section>
-      <section>
-
-        <article class="tarea">
+      <section id="lista-tareas">
+        <!-- ESTE ES EL MODELO DE UNA TAREA -->
+        <!-- <article class="tarea" spellcheck="false">
           <input type="checkbox" class="tarea-indicador">
-          <!-- <div class="tarea-opciones">
-          </div> -->
           <div class="tarea-contenido">
-            <div contenteditable class="tarea-editable"></div>
-          </div>
-        </article>
-
-        <!-- <article class="tarea tarea-completada">
-          <div class="tarea-opciones">
-            <input type="checkbox">
-          </div>
-          <div class="tarea-contenido">
-            <div contenteditable class="tarea-editable">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt doloribus ab explicabo architecto. Quas
-              nam beatae eos dicta corrupti iusto hic ad, unde doloribus provident. Eos est quibusdam numquam dicta.
-            </div>
+            <div contenteditable class="tarea-editable">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
           </div>
         </article> -->
 
       </section>
     </div>
   </div>
+  <div class="baner-anuncio">
+    <div class="scrollea-anuncio algo">
+      <div class="anuncio">
+        <div class="alerta-grid">
+          <div class="barra-anuncio">
+            <span class="barra-anuncio-titulo"></span><span><i class="fa fa-times anuncio-cerrar"
+                aria-hidden="true"></i></span>
+          </div>
+          <div class="contenido-anuncio">
+          </div>
+          <div class="barra-anuncio"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/bajosEstilos.js"></script>
 </body>
 
 </html>
