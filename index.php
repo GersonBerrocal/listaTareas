@@ -15,10 +15,10 @@
   <div class="contenedor">
     <div class="nav">
       <div class="nav-tab">
-        <i class="fa fa-home" aria-hidden="true"></i>
+        <i class="fa fa-sun-o" aria-hidden="true"></i>
       </div>
       <div class="nav-tab">
-        <i class="fa fa-check-circle" aria-hidden="true"></i>
+        <i class="fa fa-moon-o" aria-hidden="true"></i>
       </div>
     </div>
     <div class="cuerpo-tareas">
@@ -54,6 +54,9 @@
   <script src="js/agregarTarea.js"></script>
   <script src="js/editarMarcarTarea.js"></script>
   <script src="js/bajosEstilos.js"></script>
+  <script>
+
+  </script>
 </body>
 
 </html>

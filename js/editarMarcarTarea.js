@@ -1,6 +1,8 @@
 
 function focusEdition() {
+
   let textoAntes = this.textContent;
+
   this.addEventListener("blur", function () {
     guardarEdicionTarea(textoAntes, this);
   });
@@ -28,6 +30,21 @@ function marcarNota() {
   })
     .then(response => response.text())
     .then(respuestados => {
+      console.log(respuestados);
+    }
+    );
+}
+
+function eliminarTarea() {
+  tareaElement = this.parentElement;
+  elementoID = tareaElement.getAttribute("data-tareasid");
+  fetch(`./inc/eliminarTarea.php?tareeliminaid=${elementoID}`, {
+    method: 'GET'
+  })
+    .then(response => response.text())
+    .then(respuestados => {
+      // mostrarTarea_env();
+      tareaElement.parentElement.removeChild(tareaElement);
       console.log(respuestados);
     }
     );

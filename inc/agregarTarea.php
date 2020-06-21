@@ -15,4 +15,15 @@ if (!$sentencia->execute()) {
   echo "Falló la ejecución: (" . $sentencia->errno . ") " . $sentencia->error;
 }
 
-echo "consultacorrecta";
+
+$sentencia_encontrarID = $mysqli->query("SELECT id FROM TAREAS  ORDER BY id DESC LIMIT 1");
+$resultado_ID = $sentencia_encontrarID->fetch_row();
+$sentencia_encontrarID->close();
+$template_agr = '<article class="tarea" spellcheck="false" data-tareasid="'  . $resultado_ID[0] . '">
+          <button class="tarea-hamburger"><i class="fa fa-times" aria-hidden="true"></i></button>
+           <input type="checkbox" class="tarea-indicador">
+          <div class="tarea-contenido">
+            <div contenteditable class="tarea-editable">' . $nuevaTarea . '</div>
+           </div>
+      </article>';
+echo $template_agr;
