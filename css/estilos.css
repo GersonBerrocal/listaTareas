@@ -83,7 +83,7 @@ color: var(--colorBlue);
   outline: none;
 }
 .input-agregar-tarea:empty::before {
-  position: absolute;
+  position: relative;
   color: var(--colorSelect);
   content: "Agregar tarea";
   cursor: text;

@@ -1,9 +1,16 @@
 let limitCaracterTarea = 140;
 let inputAgregarTarea = document.querySelector(".input-agregar-tarea");
 let cajaEditableTarea = document.getElementsByClassName("tarea-editable");
+let tareaIndicador = document.getElementsByClassName("tarea-indicador");
+let indicador = 0;
 for (const element_limit of cajaEditableTarea) {
   element_limit.addEventListener("keypress", validarAgregarTarea);
+  element_limit.addEventListener("focus", focusEdition);
   element_limit.addEventListener("paste", validarPegadoEnTarea);
+  if (tareaIndicador[indicador]) {
+    tareaIndicador[indicador].addEventListener("change", marcarNota);
+    indicador += 1;
+  }
 }
 // eventos
 inputAgregarTarea.addEventListener("keypress", validarAgregarTarea);

@@ -52,8 +52,8 @@
     </div>
   </div>
   <script src="js/agregarTarea.js"></script>
-  <script src="js/bajosEstilos.js"></script>
   <script src="js/editarMarcarTarea.js"></script>
+  <script src="js/bajosEstilos.js"></script>
 </body>
 
 </html>

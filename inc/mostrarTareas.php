@@ -7,9 +7,10 @@ $obtenerTareas->data_seek(0);
 $template = "";
 while ($fila = $obtenerTareas->fetch_assoc()) {
   global $template;
+  $chek = $fila['estado'] == 1 ? "checked" : "";
   $template = $template .
     '<article class="tarea" spellcheck="false" data-tareasid="' . $fila['id'] . '">
-           <input type="checkbox" class="tarea-indicador">
+           <input type="checkbox" ' . $chek . ' class="tarea-indicador">
           <div class="tarea-contenido">
             <div contenteditable class="tarea-editable">' . $fila['nota'] . '</div>
            </div>
