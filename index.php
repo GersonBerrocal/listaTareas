@@ -31,14 +31,9 @@
         </div>
       </section>
       <section id="lista-tareas">
-        <!-- ESTE ES EL MODELO DE UNA TAREA -->
-        <!-- <article class="tarea" spellcheck="false">
-          <input type="checkbox" class="tarea-indicador">
-          <div class="tarea-contenido">
-            <div contenteditable class="tarea-editable">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-          </div>
-        </article> -->
-
+        <?php
+        include_once 'inc/mostrarTareas.php';
+        ?>
       </section>
     </div>
   </div>
@@ -47,8 +42,7 @@
       <div class="anuncio">
         <div class="alerta-grid">
           <div class="barra-anuncio">
-            <span class="barra-anuncio-titulo"></span><span><i class="fa fa-times anuncio-cerrar"
-                aria-hidden="true"></i></span>
+            <span class="barra-anuncio-titulo"></span><span><i class="fa fa-times anuncio-cerrar" aria-hidden="true"></i></span>
           </div>
           <div class="contenido-anuncio">
           </div>
@@ -57,7 +51,9 @@
       </div>
     </div>
   </div>
+  <script src="js/agregarTarea.js"></script>
   <script src="js/bajosEstilos.js"></script>
+  <script src="js/editarMarcarTarea.js"></script>
 </body>
 
 </html>
